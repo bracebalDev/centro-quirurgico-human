@@ -43,11 +43,13 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(self)">
-
-    <!-- Favicon -->
-    <link rel="icon" href="Assets/Logo.jpg" type="image/jpeg">
+    <!-- Favicon de Alta Resolución para Navegadores y Dispositivos Móviles -->
+    <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
+    <link rel="alternate icon" type="image/jpeg" href="Assets/Logo.jpg">
     <link rel="apple-touch-icon" href="Assets/Logo.jpg">
+
+    <!-- Preload para Carga Instantánea de Elementos Críticos (LCP & Web Vitals) -->
+    <link rel="preload" href="Assets/jumbotron1.jpg" as="image" fetchpriority="high">
 
     <!-- Hoja de Estilos -->
     <link rel="stylesheet" href="style.css">
@@ -308,7 +310,7 @@
                     <!-- DR. JOSE GOMEZ -->
                     <article class="doctor-card" itemscope itemtype="https://schema.org/Physician">
                         <div class="doctor-img-wrap">
-                            <img src="Assets/Dr. Jose Gomez.jpg" alt="Dr. José Gómez - Traumatólogo especialista en rodilla" loading="lazy" width="300" height="290" itemprop="image">
+                            <img src="Assets/dr-jose-gomez.jpg" alt="Dr. José Gómez - Traumatólogo especialista en rodilla" loading="lazy" width="300" height="290" itemprop="image">
                             <span class="doctor-specialty-badge" itemprop="medicalSpecialty">Traumatología</span>
                         </div>
                         <div class="doctor-body">
@@ -334,7 +336,7 @@
                     <!-- DRA. LUISA PEREZ -->
                     <article class="doctor-card" itemscope itemtype="https://schema.org/Physician">
                         <div class="doctor-img-wrap">
-                            <img src="Assets/Luisa Perez.jpg" alt="Dra. Luisa Pérez - Especialista en Medicina Interna" loading="lazy" width="300" height="290" itemprop="image">
+                            <img src="Assets/dra-luisa-perez.jpg" alt="Dra. Luisa Pérez - Especialista en Medicina Interna" loading="lazy" width="300" height="290" itemprop="image">
                             <span class="doctor-specialty-badge" itemprop="medicalSpecialty">Medicina Interna</span>
                         </div>
                         <div class="doctor-body">
@@ -360,7 +362,7 @@
                     <!-- DR. LUIS GOMEZ -->
                     <article class="doctor-card" itemscope itemtype="https://schema.org/Physician">
                         <div class="doctor-img-wrap">
-                            <img src="Assets/Dr. Luis Gómez.jpg" alt="Dr. Luis Gómez - Cirujano Bariátrico y Metabólico" loading="lazy" width="300" height="290" itemprop="image">
+                            <img src="Assets/dr-luis-gomez.jpg" alt="Dr. Luis Gómez - Cirujano Bariátrico y Metabólico" loading="lazy" width="300" height="290" itemprop="image">
                             <span class="doctor-specialty-badge" itemprop="medicalSpecialty">Cirugía Bariátrica</span>
                         </div>
                         <div class="doctor-body">
@@ -386,7 +388,7 @@
                     <!-- DRA. CARMEN LOMANA -->
                     <article class="doctor-card" itemscope itemtype="https://schema.org/Physician">
                         <div class="doctor-img-wrap">
-                            <img src="Assets/Dra. Carmen Lomana.jpg" alt="Dra. Carmen Lomana - Médico Fisiatra" loading="lazy" width="300" height="290" itemprop="image">
+                            <img src="Assets/dra-carmen-lomana.jpg" alt="Dra. Carmen Lomana - Médico Fisiatra" loading="lazy" width="300" height="290" itemprop="image">
                             <span class="doctor-specialty-badge" itemprop="medicalSpecialty">Fisiatría & Terapia</span>
                         </div>
                         <div class="doctor-body">
