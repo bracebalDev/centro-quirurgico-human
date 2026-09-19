@@ -1,0 +1,9 @@
+# robots.txt para Centro Quirúrgico Human
+User-agent: *
+Allow: /
+Allow: /Assets/
+Allow: /Fonts/
+Allow: /style.css
+Allow: /script.js
+
+Sitemap: https://centroquirurgicohuman.com/sitemap.xml
