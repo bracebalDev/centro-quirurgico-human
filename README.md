@@ -1,6 +1,7 @@
 # 🏥 Centro Quirúrgico Human — Plataforma Web Médica & Portafolio Digital (v2.0)
 
 > **Repositorio Oficial:** [https://github.com/bracebalDev/centro-quirurgico-human.git](https://github.com/bracebalDev/centro-quirurgico-human.git)  
+> **Sitio en Vivo (GitHub Pages):** [https://bracebaldev.github.io/centro-quirurgico-human/](https://bracebaldev.github.io/centro-quirurgico-human/)  
 > **Especialidad:** Cirugía Bariátrica, Traumatología & Artroscopia, Medicina Interna Perioperatoria, Fisiatría y Quirófanos Inteligentes Clase A.
 
 ---
@@ -10,6 +11,36 @@
 El proyecto **Centro Quirúrgico Human** ha sido completamente refactorizado para transformar un prototipo web inicial en una **experiencia digital médica de alta gama**, orientada a servir como **landing page y portafolio interactivo de servicios de salud**.
 
 Se preservó estrictamente la **identidad corporativa y la paleta de colores original**, elevando la calidad visual, la interactividad del paciente, la optimización para motores de búsqueda (**SEO Avanzado**) y un **blindaje de ciberseguridad frontend** robusto de grado médico.
+
+---
+
+## 🧪 Reporte QA de Compatibilidad y Responsividad Multidispositivo
+
+Como parte del control de calidad exhaustivo (QA), se incorporaron estándares de renderizado y adaptabilidad para toda la gama de dispositivos del mercado:
+
+### 1. 🍎 Ecosistema Apple & Motor WebKit (Safari en iPhone, iPad, Mac)
+- **Soporte de Safe Area Insets (`env(safe-area-inset-*)`)**:
+  - Ajuste dinámico de cabeceras, Top Bar, modales clínicos y botones flotantes para respetar el **Dynamic Island**, el **Notch** y la barra de navegación gestual inferior (**Home Indicator** de iOS).
+- **Viewport Fit Cover (`viewport-fit=cover`)**:
+  - Permite que el diseño aproveche la pantalla de extremo a extremo sin márgenes blancos antiestéticos en Safari móvil.
+- **Dynamic Viewport Height (`100dvh` / `100svh`)**:
+  - Corrige el molesto salto de scroll en iOS provocado por el colapso y expansión dinámica de la barra de direcciones de Safari.
+- **Prevención de Zoom Involuntario en Formularios**:
+  - Tamaño de tipografía de inputs fijado en `16px` para evitar el zoom automático forzado por WebKit al hacer foco.
+- **Tipografía y Renderizado Retina**:
+  - Implementación de `-webkit-font-smoothing: antialiased;` y fuentes locales optimizadas con fallback a *SF Pro Display/Text*.
+- **Efectos Glassmorphic con Aceleración por Hardware**:
+  - Prefijo `-webkit-backdrop-filter: blur(20px) saturate(180%)` garantizando el efecto de cristal traslúcido nativo de Apple.
+
+### 2. 📱 Dispositivos Dual-Screen & Plegables (iPhone Duo / Surface Duo / Foldables)
+- **Soporte de la API CSS Viewport Segments**:
+  - `@media (horizontal-viewport-segments: 2)`: Distribución inteligente en dos columnas cuando el dispositivo se despliega horizontalmente, evitando que los textos o botones queden cortados por la bisagra física (*hinge*).
+  - `@media (vertical-viewport-segments: 2)`: Adaptación para modo plegado vertical / postura semiabierta (Laptop Mode).
+- **Contenedores Flexibles y Grids Auto-adaptables**:
+  - El catálogo de servicios y el directorio médico se redistribuyen fluidamente entre 1, 2, 3 y 4 columnas según el ancho disponible (`minmax()`).
+
+### 3. 🖥️ Escritorios, Laptops y Tablets
+- Soporte para pantallas 4K, UltraWide y monitores de alta resolución con límites de lectura ergonómicos (`max-width: 1240px`).
 
 ---
 
@@ -77,44 +108,13 @@ Se preservó estrictamente la **identidad corporativa y la paleta de colores ori
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🚀 Despliegue en GitHub Pages
 
-```text
-Centro Quirúrgico Human/
-├── Assets/                        # Imágenes y recursos multimedia optimizados
-│   ├── Dr. Jose Gomez.jpg         # Fotografía especialista en Traumatología
-│   ├── Dr. Luis Gómez.jpg         # Fotografía cirujano Bariátrico
-│   ├── Dra. Carmen Lomana.jpg     # Fotografía médico Fisiatra
-│   ├── Luisa Perez.jpg            # Fotografía especialista en Medicina Interna
-│   ├── Logo.jpg                   # Isotipo / Logotipo principal
-│   ├── logo_footer.svg            # Logo vectorial SVG para pie de página
-│   ├── jumbotron1.jpg             # Imagen de fondo Hero Section
-│   ├── jumbotron2.jpg             # Imagen de infraestructura hospitalaria
-│   └── Star.jpg                   # Recurso gráfico de calificación
-├── Fonts/                         # Fuentes locales con formato TrueType
-│   ├── Roboto-Bold.ttf
-│   ├── Roboto-Light.ttf
-│   └── Roboto-Regular.ttf
-├── index.html                     # Landing Page Principal con todas las secciones y Schema.org
-├── servicios.html                 # Portafolio detallado de especialidades quirúrgicas
-├── directorio.html                # Staff y directorio médico de especialistas
-├── sobre_nosotros.html            # Misión, visión, políticas de privacidad y términos
-├── style.css                      # Sistema de diseño moderno, CSS Grid, Glassmorphism y Flexbox
-├── script.js                      # Motor interactivo blindado con seguridad y sanitización XSS
-├── sitemap.xml                    # Mapa del sitio estructurado para motores de búsqueda
-├── robots.txt                     # Directivas seguras para rastreadores web
-└── README.md                      # Documentación completa y memoria técnica del proyecto
-```
+El proyecto cuenta con integración continua automática mediante **GitHub Actions**.
 
----
-
-## 🚀 Despliegue e Instrucciones de Uso
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone https://github.com/bracebalDev/centro-quirurgico-human.git
-   ```
-2. **Ejecutar localmente:**
-   - Puede abrirse directamente el archivo `index.html` en cualquier navegador web moderno, o servirse mediante cualquier servidor web estático (Nginx, Apache, GitHub Pages, Vercel, Netlify, Live Server).
-3. **Compatibilidad:**
-   - Totalmente compatible con Chrome, Edge, Firefox, Safari, iOS y Android.
+### Pasos para activar en el repositorio:
+1. Ir a **Settings** en el repositorio de GitHub: `https://github.com/bracebalDev/centro-quirurgico-human/settings/pages`.
+2. En la sección **Build and deployment**:
+   - **Source:** Seleccionar `GitHub Actions` (o `Deploy from a branch` -> Rama `main` / Carpeta `/(root)`).
+3. La web quedará publicada automáticamente en:  
+   👉 **[https://bracebaldev.github.io/centro-quirurgico-human/](https://bracebaldev.github.io/centro-quirurgico-human/)**
