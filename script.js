@@ -176,6 +176,30 @@
                 bio: 'Dedicada a la reincorporación funcional temprana de pacientes postoperados, aplicando fisioterapia avanzada, analgesia multimodal y planes individualizados de movilidad.',
                 procedures: ['Rehabilitación postoperatoria osteoarticular', 'Terapia física para reintegro deportivo y laboral', 'Manejo intervencionista del dolor agudo y crónico', 'Readaptación neuromuscular guiada'],
                 schedule: 'Lunes a Viernes: 07:30 AM - 01:30 PM'
+            },
+            {
+                id: 'dr-alejandro-morales',
+                name: 'Dr. Alejandro Morales',
+                role: 'Cirujano General & Laparoscopia de Alta Precisión',
+                image: 'Assets/dr-alejandro-morales.jpg',
+                stars: 5,
+                experience: '15+ años de experiencia',
+                credentials: 'M.D. Cirugía General y Digestiva. Miembro de la Asociación Internacional de Cirugía Laparoscópica.',
+                bio: 'Especialista en colecistectomía laparoscópica, hernioplastias complejas con malla y cirugía de pared abdominal con mínimas incisiones y rápida alta médica.',
+                procedures: ['Colecistectomía laparoscópica avanzada', 'Reparación anatómica de hernias inguinales y umbilicales', 'Cirugía de reflujo gastroesofágico', 'Procedimientos ambulatorios de corta estancia'],
+                schedule: 'Lunes, Miércoles y Viernes: 08:30 AM - 03:00 PM'
+            },
+            {
+                id: 'dra-sofia-valenzuela',
+                name: 'Dra. Sofía Valenzuela',
+                role: 'Anestesióloga & Manejo Avanzado del Dolor Perioperatorio',
+                image: 'Assets/dra-sofia-valenzuela.jpg',
+                stars: 5,
+                experience: '13+ años de experiencia',
+                credentials: 'M.D. Especialista en Anestesiología y Reanimación. Fellow en Anestesia Regional Guiada por Ultrasonido.',
+                bio: 'Líder en analgesia multimodal libre de opioides, monitoreo cerebral de profundidad anestésica (BIS) y confort total antes y durante el despertar quirúrgico.',
+                procedures: ['Anestesia regional guiada por ultrasonido', 'Protocolos ERAS de analgesia multimodal preventiva', 'Monitoreo hemodinámico y BIS continuo', 'Manejo especializado de dolor postoperatorio'],
+                schedule: 'Lunes a Sábado: 07:00 AM - 02:00 PM'
             }
         ],
         services: [

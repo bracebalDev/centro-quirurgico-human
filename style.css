@@ -611,7 +611,7 @@ header.main-header {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
     align-items: stretch;
 }
@@ -1564,6 +1564,11 @@ header.main-header {
    MEDIA QUERIES Y RESPONSIVIDAD COMPLETA (MOBILE / TABLET / DESKTOP)
    ========================================================================== */
 @media (max-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
     .infra-grid {
         grid-template-columns: 1fr;
     }
@@ -1628,8 +1633,65 @@ header.main-header {
         display: none;
     }
 
+    /* 2 Columnas ergonómicas en Mobile */
     .card-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .doctor-card {
+        border-radius: var(--border-radius-sm);
+    }
+
+    .doctor-img-wrap {
+        height: 170px;
+    }
+
+    .doctor-specialty-badge {
+        font-size: 0.62rem;
+        padding: 0.18rem 0.45rem;
+        bottom: 6px;
+        left: 6px;
+    }
+
+    .doctor-body {
+        padding: 0.75rem 0.6rem;
+    }
+
+    .doctor-name {
+        font-size: 0.95rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .doctor-role {
+        font-size: 0.75rem;
+        margin-bottom: 0.35rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .doctor-bio-short {
+        display: none;
+    }
+
+    .rating-stars {
+        margin-bottom: 0.75rem;
+    }
+
+    .rating-stars svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .rating-score {
+        font-size: 0.72rem;
+    }
+
+    .doctor-card .btn {
+        padding: 0.4rem 0.4rem;
+        font-size: 0.75rem;
     }
 
     .services-grid {
